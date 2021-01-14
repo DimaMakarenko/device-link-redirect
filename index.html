@@ -6,11 +6,6 @@
       function getMobileOperatingSystem() {
         var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-        // Windows Phone must come first because its UA also contains "Android"
-        if (/windows phone/i.test(userAgent)) {
-          return "Windows Phone";
-        }
-
         if (/android/i.test(userAgent)) {
           return "Android";
         }
@@ -28,13 +23,13 @@
       function DetectAndServe() {
         let os = getMobileOperatingSystem();
         if (os == "Android") {
-          window.location.href = "http://www.Androidexample.com";
+          window.location.href =
+            "https://play.google.com/store/apps/details?id=com.polycard";
         } else if (os == "iOS") {
-          window.location.href = "http://www.IOSexample.com";
-        } else if (os == "Windows Phone") {
-          window.location.href = "http://www.WindowsPhoneexample.com";
+          window.location.href =
+            "https://apps.apple.com/ua/app/polycard/id1445523640";
         } else {
-          window.location.href = "http://www.NowherLandexample.com";
+          window.location.href = "https://polycard.club/";
         }
       }
     </script>
